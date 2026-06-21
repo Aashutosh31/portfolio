@@ -37,7 +37,7 @@ export const ContactPage = ({ setRoute }) => {
           </div>
           
           <div className="mt-20 pt-8 border-t border-[#1F1F1F] flex flex-col md:flex-row justify-between items-center text-sm text-[#555]">
-            <p>© {new Date().getFullYear()} Ashutosh Bairagi. Engineered with React & Tailwind.</p>
+            <p>© {new Date().getFullYear()} Aashutosh Bairagi. Engineered with React & Tailwind.</p>
             <div className="flex items-center gap-2 mt-4 md:mt-0">
               <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"/> Available for work
             </div>

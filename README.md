@@ -6,7 +6,7 @@ Built to feel like the homepage of a modern startup, replacing traditional "stud
 
 🚀 Tech Stack
 
-Core Framework: React 19 + Vite
+Core Framework: React  + Vite
 
 Styling: Tailwind CSS
 
