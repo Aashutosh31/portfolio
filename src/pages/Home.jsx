@@ -12,25 +12,24 @@ import { Timeline } from '../components/sections/Timeline';
 import { Roadmap } from '../components/sections/Roadmap';
 import { Contact } from '../components/sections/Contact';
 
-export const Home = ({ setRoute }) => {
-  return (
-    <motion.main
-      key="home"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <Hero />
-      <About />
-      <Dashboard />
-      <Projects setRoute={setRoute} />
-      <Skills />
-      <Insights />
-      <Principles />
-      <BuildingInPublic />
-      <Timeline />
-      <Roadmap />
-      <Contact />
-    </motion.main>
-  );
-};
+export const Home = ({ setRoute }) => (
+  <motion.main
+    key="home"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ duration: 0.3 }}
+  >
+    <Hero />
+    <About />
+    <Dashboard />
+    <Projects setRoute={setRoute} />
+    <Skills />
+    <Insights />
+    <Principles />
+    <BuildingInPublic />
+    <Timeline />
+    <Roadmap />
+    <Contact />
+  </motion.main>
+);

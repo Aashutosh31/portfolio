@@ -5,17 +5,30 @@ import { Card } from '../ui/Card';
 import { DATA } from '../../data/portfolioData';
 
 export const Principles = () => (
-  <Section id="principles">
-    <SectionTitle title="Engineering Principles" subtitle="The core philosophies that guide my software design and architecture." />
-    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  <Section id="principles" className="border-t border-[#111]">
+    <SectionTitle
+      eyebrow="engineering_principles"
+      title="How I build"
+      subtitle="Core philosophies that guide every architectural decision I make."
+    />
+    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
       {DATA.principles.map((p, i) => (
-        <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
-          <Card className="p-6 h-full border-t-2 border-t-[#3B82F6]/50">
-            <div className="w-10 h-10 rounded-lg bg-[#1A1A1A] flex items-center justify-center text-[#3B82F6] mb-4">
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: i * 0.08 }}
+        >
+          <Card className="p-6 h-full border-[#141414] bg-[#0A0A0A] border-t-[#3B82F6]/40 border-t-2 group" hover>
+            <div className="w-9 h-9 rounded-lg bg-[#3B82F6]/10 border border-[#3B82F6]/20 flex items-center justify-center text-[#3B82F6] mb-5 group-hover:bg-[#3B82F6]/15 transition-colors">
               {p.icon}
             </div>
-            <h3 className="text-white font-medium mb-2">{p.title}</h3>
-            <p className="text-[#A1A1AA] text-sm leading-relaxed">{p.desc}</p>
+            <div className="text-xs font-mono-custom text-[#333] mb-2 uppercase tracking-widest">
+              principle_{String(i + 1).padStart(2, '0')}
+            </div>
+            <h3 className="text-white font-semibold mb-3 leading-snug">{p.title}</h3>
+            <p className="text-[#555] text-sm leading-relaxed">{p.desc}</p>
           </Card>
         </motion.div>
       ))}
