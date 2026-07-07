@@ -52,6 +52,7 @@ export const DATA = {
     { topic: "Git and GitHub", target: "Advanced", current: "Intermediate", progress: 60, reason: "To manage version control and collaborate effectively with other developers." }
   ],
   buildingInPublic: [
+    {date: "July 2026", title: "ARC-AI v1.0.0 Release", type: "Release", desc: "Released the first stable version of ARC-AI with multi-workspace isolation, RAG memory, and live web research capabilities.", color: "blue" },
     { date: "May 2026", title: "Launched ARC-AI v0.13.0", type: "Release", desc: "Successfully shipped true multi-workspace isolated environments. Complete rewrite of the runtime layer.", color: "blue" },
     { date: "Apr 2026", title: "WebChat Redis Migration", type: "Architecture", desc: "Moved presence tracking and socket coordination entirely to Redis, reducing server memory load by 40%.", color: "violet" },
     { date: "Jan 2026", title: "LiveKit WebRTC Integration", type: "Feature", desc: "Bypassed standard server routing to implement Discord-style voice rooms in WebChat.", color: "blue" },
@@ -65,6 +66,7 @@ export const DATA = {
   },
   timeline: [
     { year: "2026", title: "Architected WebChat", desc: "Designed and deployed a distributed monolithic cluster for real-time social networking using Redis and MongoDB." },
+    {year: "2026", title: "ARC-AI v1.0.0 Release", desc: "Planned and executed the roadmap for ARC-AI, including multi-workspace isolation, RAG memory, and live web research capabilities." },
     { year: "2026", title: "Launched ARC-AI v0.13.0", desc: "Evolved a chatbot into a multi-workspace autonomous runtime environment with Pinecone RAG memory." },
     { year: "2025", title: "Deepened Real-Time & Backend Expertise", desc: "Explored advanced patterns for handling real-time data synchronization and backend service orchestration." },
     { year: "2025", title: "Learned Socket.IO and WebSockets", desc: "Understood the fundamentals of real-time communication and implemented WebSocket solutions." },
@@ -112,7 +114,7 @@ export const DATA = {
       image: "/images/Pasted image.png",
       tags: ["AI Agent", "RAG", "Pinecone", "Socket.IO", "Mistral", "GPT-4o"],
       links: { demo: "https://arcaiproject.qzz.io/", github: "https://github.com/Aashutosh31/arc-ai-project" },
-      metrics: { time: "8 Months", complexity: "Extreme", status: "v0.13.0-beta", architecture: "Event-Driven", loc: "22,000+", endpoints: "30+", collections: "8+" },
+      metrics: { time: "8 Months", complexity: "Extreme", status: "v1.0.0", architecture: "Event-Driven", loc: "22,000+", endpoints: "30+", collections: "8+" },
       video: "/videos/arc-ai-v13.mp4",
       overview: "ARC-AI evolved from a reactive chatbot into a proactive, multi-workspace autonomous runtime environment. It features isolated execution buckets, semantic vector memory, live web research, and direct UI actuation.",
       problem: "Standard LLM wrappers lose context quickly and cannot execute background tasks. They lack the architecture to isolate different engineering workflows, leading to context contamination and 'stale' memory.",
