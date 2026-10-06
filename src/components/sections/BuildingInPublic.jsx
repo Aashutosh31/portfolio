@@ -1,14 +1,14 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Section, SectionTitle } from '../ui/Section';
-import { Card } from '../ui/Card';
-import { DATA } from '../../data/portfolioData';
+import React from "react";
+import { motion } from "framer-motion";
+import { Section, SectionTitle } from "../ui/Section";
+import { Card } from "../ui/Card";
+import { DATA } from "../../data/portfolioData";
 
 const typeStyles = {
-  Release: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
-  Architecture: 'bg-[#3B82F6]/10 text-[#3B82F6] border-[#3B82F6]/20',
-  Feature: 'bg-[#8B5CF6]/10 text-[#8B5CF6] border-[#8B5CF6]/20',
-  Experiment: 'bg-amber-500/10 text-amber-400 border-amber-500/20',
+  Release: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+  Architecture: "bg-[#3B82F6]/10 text-[#3B82F6] border-[#3B82F6]/20",
+  Feature: "bg-[#8B5CF6]/10 text-[#8B5CF6] border-[#8B5CF6]/20",
+  Experiment: "bg-amber-500/10 text-amber-400 border-amber-500/20",
 };
 
 export const BuildingInPublic = () => (
@@ -30,11 +30,17 @@ export const BuildingInPublic = () => (
             className="relative mb-8 last:mb-0"
           >
             {/* Timeline dot */}
-            <div className="absolute -left-[41px] top-3 w-3 h-3 rounded-full border-2 border-[#3B82F6] bg-[#0A0A0A]" />
+            <div className="absolute -left-[41px] top-3 w-3 h-3 rounded-full border-2 border-[#3B82F6] bg-[#080a13]" />
 
-            <Card className="p-5 border-[#141414] bg-[#0A0A0A] hover:border-[#1F1F1F]" hover glow="blue">
+            <Card
+              className="p-5 border-white/[0.09] bg-[#121523]/70 hover:border-white/[0.2]"
+              hover
+              glow="blue"
+            >
               <div className="flex flex-wrap items-center gap-3 mb-3">
-                <span className={`text-[10px] px-2.5 py-0.5 rounded-full border font-mono-custom tracking-widest ${typeStyles[item.type]}`}>
+                <span
+                  className={`text-[10px] px-2.5 py-0.5 rounded-full border font-mono-custom tracking-widest ${typeStyles[item.type]}`}
+                >
                   {item.type}
                 </span>
                 <span className="text-[10px] text-[#b9b9ff] font-mono-custom uppercase tracking-widest">
@@ -42,7 +48,9 @@ export const BuildingInPublic = () => (
                 </span>
               </div>
               <h3 className="text-white font-semibold mb-2">{item.title}</h3>
-              <p className="text-[#b9b9ff] text-sm leading-relaxed">{item.desc}</p>
+              <p className="text-[#b9b9ff] text-sm leading-relaxed">
+                {item.desc}
+              </p>
             </Card>
           </motion.div>
         ))}

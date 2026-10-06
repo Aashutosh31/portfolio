@@ -1,10 +1,17 @@
-import React from 'react';
+import React from "react";
 
-export const Button = ({ children, variant = 'primary', href, onClick, className = '', size = 'md' }) => {
+export const Button = ({
+  children,
+  variant = "primary",
+  href,
+  onClick,
+  className = "",
+  size = "md",
+}) => {
   const sizes = {
-    sm: 'px-4 py-2 text-xs gap-1.5',
-    md: 'px-5 py-2.5 text-sm gap-2',
-    lg: 'px-8 py-3.5 text-base gap-2.5',
+    sm: "px-4 py-2 text-xs gap-1.5",
+    md: "px-5 py-2.5 text-sm gap-2",
+    lg: "px-8 py-3.5 text-base gap-2.5",
   };
 
   const variants = {
@@ -34,21 +41,21 @@ export const Button = ({ children, variant = 'primary', href, onClick, className
   const base = `
     inline-flex items-center justify-center rounded-xl font-semibold
     transition-all duration-300 ease-out
-    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0A0A]
+    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080a13]
     active:scale-[0.97]
     ${sizes[size]}
     ${variants[variant]}
     ${className}
   `;
 
-  const Component = href ? 'a' : 'button';
+  const Component = href ? "a" : "button";
 
   return (
     <Component
       href={href}
       onClick={onClick}
-      target={href?.startsWith('http') ? '_blank' : undefined}
-      rel={href?.startsWith('http') ? 'noopener noreferrer' : undefined}
+      target={href?.startsWith("http") ? "_blank" : undefined}
+      rel={href?.startsWith("http") ? "noopener noreferrer" : undefined}
       className={base}
     >
       {children}

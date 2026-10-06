@@ -1,9 +1,16 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Code2, BookOpen, Search, ChevronRight, Activity, Zap } from 'lucide-react';
-import { Section, SectionTitle } from '../ui/Section';
-import { Card } from '../ui/Card';
-import { DATA } from '../../data/portfolioData';
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  Code2,
+  BookOpen,
+  Search,
+  ChevronRight,
+  Activity,
+  Zap,
+} from "lucide-react";
+import { Section, SectionTitle } from "../ui/Section";
+import { Card } from "../ui/Card";
+import { DATA } from "../../data/portfolioData";
 
 export const Dashboard = () => (
   <Section id="dashboard" className="border-t border-[#111]">
@@ -16,27 +23,27 @@ export const Dashboard = () => (
       {[
         {
           icon: <Code2 className="w-4 h-4 text-[#3B82F6]" />,
-          label: 'Building',
+          label: "Building",
           content: DATA.currently.building,
-          accent: 'blue',
+          accent: "blue",
         },
         {
           icon: <BookOpen className="w-4 h-4 text-[#8B5CF6]" />,
-          label: 'Learning',
+          label: "Learning",
           content: DATA.currently.learning,
-          accent: 'violet',
+          accent: "violet",
         },
         {
           icon: <Search className="w-4 h-4 text-emerald-400" />,
-          label: 'Exploring',
+          label: "Exploring",
           content: DATA.currently.exploring,
-          accent: 'green',
+          accent: "green",
         },
         {
           icon: <Activity className="w-4 h-4 text-[#3B82F6]" />,
-          label: 'Core Focus',
+          label: "Core Focus",
           content: [DATA.currently.focus],
-          accent: 'blue',
+          accent: "blue",
           highlight: true,
         },
       ].map((item, i) => (
@@ -49,20 +56,27 @@ export const Dashboard = () => (
         >
           <Card
             hover={false}
-            className={`p-5 h-full border-[#141414] ${item.highlight ? 'bg-[#3B82F6]/5 border-[#3B82F6]/15' : 'bg-[#0A0A0A]'}`}
+            className={`p-5 h-full border-white/[0.09] ${item.highlight ? "bg-[#3B82F6]/5 border-[#3B82F6]/15" : "bg-[#121523]/70"}`}
           >
             <h3 className="text-[#b9b9ff] text-xs font-mono-custom uppercase tracking-widest mb-4 flex items-center gap-2">
               {item.icon}
               {item.label}
             </h3>
             <ul className="space-y-2">
-              {item.content.map(text => (
-                <li key={text} className="text-white text-sm flex items-start gap-2 leading-snug">
-                  <ChevronRight className={`w-3 h-3 mt-0.5 flex-shrink-0 ${
-                    item.accent === 'blue' ? 'text-[#3B82F6]' :
-                    item.accent === 'violet' ? 'text-[#8B5CF6]' :
-                    'text-emerald-400'
-                  }`} />
+              {item.content.map((text) => (
+                <li
+                  key={text}
+                  className="text-white text-sm flex items-start gap-2 leading-snug"
+                >
+                  <ChevronRight
+                    className={`w-3 h-3 mt-0.5 flex-shrink-0 ${
+                      item.accent === "blue"
+                        ? "text-[#3B82F6]"
+                        : item.accent === "violet"
+                          ? "text-[#8B5CF6]"
+                          : "text-emerald-400"
+                    }`}
+                  />
                   {text}
                 </li>
               ))}

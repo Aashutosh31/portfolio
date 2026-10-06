@@ -1,9 +1,9 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Compass } from 'lucide-react';
-import { Section, SectionTitle } from '../ui/Section';
-import { Card } from '../ui/Card';
-import { DATA } from '../../data/portfolioData';
+import React, { useRef, useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Compass } from "lucide-react";
+import { Section, SectionTitle } from "../ui/Section";
+import { Card } from "../ui/Card";
+import { DATA } from "../../data/portfolioData";
 
 function ProgressBar({ progress, color }) {
   const ref = useRef(null);
@@ -11,15 +11,20 @@ function ProgressBar({ progress, color }) {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setStarted(true); },
-      { threshold: 0.5 }
+      ([entry]) => {
+        if (entry.isIntersecting) setStarted(true);
+      },
+      { threshold: 0.5 },
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
   }, []);
 
   return (
-    <div ref={ref} className="w-full h-1.5 bg-[#141414] rounded-full overflow-hidden">
+    <div
+      ref={ref}
+      className="w-full h-1.5 bg-[#141414] rounded-full overflow-hidden"
+    >
       <motion.div
         className="h-full rounded-full"
         style={{ backgroundColor: color }}
@@ -40,7 +45,7 @@ export const Roadmap = () => (
     />
     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
       {DATA.roadmap.map((item, i) => {
-        const colors = ['#3B82F6', '#8B5CF6', '#10B981', '#F59E0B'];
+        const colors = ["#3B82F6", "#8B5CF6", "#10B981", "#F59E0B"];
         const color = colors[i % colors.length];
         return (
           <motion.div
@@ -50,28 +55,40 @@ export const Roadmap = () => (
             viewport={{ once: true }}
             transition={{ delay: i * 0.08 }}
           >
-            <Card hover={false} className="p-5 border-[#141414] bg-[#0A0A0A] h-full relative overflow-hidden">
+            <Card
+              hover={false}
+              className="p-5 border-white/[0.09] bg-[#121523]/70 h-full relative overflow-hidden"
+            >
               <Compass className="absolute top-3 right-3 w-10 h-10 text-[#ffffff9e] opacity-60" />
               <div className="relative">
-                <div className="text-xs font-mono-custom mb-4 uppercase tracking-widest" style={{ color }}>
-                  {String(i + 1).padStart(2, '0')}
+                <div
+                  className="text-xs font-mono-custom mb-4 uppercase tracking-widest"
+                  style={{ color }}
+                >
+                  {String(i + 1).padStart(2, "0")}
                 </div>
                 <h3 className="text-white font-semibold mb-1">{item.topic}</h3>
 
                 <div className="space-y-1.5 mb-4">
                   <div className="flex justify-between text-[10px] font-mono-custom">
-                    <span className="text-[#94adf4] uppercase tracking-widest">now</span>
+                    <span className="text-[#94adf4] uppercase tracking-widest">
+                      now
+                    </span>
                     <span style={{ color }}>{item.current}</span>
                   </div>
                   <div className="flex justify-between text-[10px] font-mono-custom">
-                    <span className="text-[#94adf4] uppercase tracking-widest">target</span>
+                    <span className="text-[#94adf4] uppercase tracking-widest">
+                      target
+                    </span>
                     <span style={{ color }}>{item.target}</span>
                   </div>
                 </div>
 
                 <ProgressBar progress={item.progress} color={color} />
 
-                <p className="text-[#b9b9ff] text-xs leading-relaxed mt-4">{item.reason}</p>
+                <p className="text-[#b9b9ff] text-xs leading-relaxed mt-4">
+                  {item.reason}
+                </p>
               </div>
             </Card>
           </motion.div>

@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Section, SectionTitle } from '../ui/Section';
-import { DATA } from '../../data/portfolioData';
+import React from "react";
+import { motion } from "framer-motion";
+import { Section, SectionTitle } from "../ui/Section";
+import { DATA } from "../../data/portfolioData";
 
 // Group by year
 const grouped = DATA.timeline.reduce((acc, item) => {
@@ -29,7 +29,9 @@ export const Timeline = () => (
             viewport={{ once: true }}
             className="flex items-center gap-4 mb-6"
           >
-            <span className="text-2xl font-bold text-white font-mono-custom">{year}</span>
+            <span className="text-2xl font-bold text-white font-mono-custom">
+              {year}
+            </span>
             <div className="flex-1 h-px bg-[#111]" />
           </motion.div>
 
@@ -43,9 +45,11 @@ export const Timeline = () => (
                 transition={{ delay: i * 0.08 }}
                 className="relative"
               >
-                <div className="absolute -left-[41px] top-1.5 w-3 h-3 bg-[#0A0A0A] border-2 border-[#3B82F6]/60 rounded-full" />
+                <div className="absolute -left-[41px] top-1.5 w-3 h-3 bg-[#080a13] border-2 border-[#3B82F6]/60 rounded-full" />
                 <h3 className="text-white font-semibold mb-1">{item.title}</h3>
-                <p className="text-[#b9b9ff] text-sm leading-relaxed">{item.desc}</p>
+                <p className="text-[#b9b9ff] text-sm leading-relaxed">
+                  {item.desc}
+                </p>
               </motion.div>
             ))}
           </div>

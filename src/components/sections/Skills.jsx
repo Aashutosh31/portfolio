@@ -1,15 +1,42 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Globe, Server, Database, Terminal, Code2, Activity } from 'lucide-react';
-import { Section, SectionTitle } from '../ui/Section';
-import { Card } from '../ui/Card';
-import { DATA } from '../../data/portfolioData';
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  Globe,
+  Server,
+  Database,
+  Terminal,
+  Code2,
+  Activity,
+} from "lucide-react";
+import { Section, SectionTitle } from "../ui/Section";
+import { Card } from "../ui/Card";
+import { DATA } from "../../data/portfolioData";
 
 const categories = [
-  { icon: <Globe className="w-4 h-4" />, label: 'Frontend', key: 'frontend', color: '#3B82F6' },
-  { icon: <Server className="w-4 h-4" />, label: 'Backend', key: 'backend', color: '#8B5CF6' },
-  { icon: <Database className="w-4 h-4" />, label: 'Databases', key: 'database', color: '#10B981' },
-  { icon: <Terminal className="w-4 h-4" />, label: 'Tools', key: 'tools', color: '#F59E0B' },
+  {
+    icon: <Globe className="w-4 h-4" />,
+    label: "Frontend",
+    key: "frontend",
+    color: "#3B82F6",
+  },
+  {
+    icon: <Server className="w-4 h-4" />,
+    label: "Backend",
+    key: "backend",
+    color: "#8B5CF6",
+  },
+  {
+    icon: <Database className="w-4 h-4" />,
+    label: "Databases",
+    key: "database",
+    color: "#10B981",
+  },
+  {
+    icon: <Terminal className="w-4 h-4" />,
+    label: "Tools",
+    key: "tools",
+    color: "#F59E0B",
+  },
 ];
 
 export const Skills = () => (
@@ -28,9 +55,15 @@ export const Skills = () => (
           viewport={{ once: true }}
           transition={{ delay: ci * 0.08 }}
         >
-          <Card hover={false} className="p-6 border-[#141414] bg-[#0A0A0A] h-full">
+          <Card
+            hover={false}
+            className="p-6 border-white/[0.09] bg-[#121523]/70 h-full"
+          >
             <div className="flex items-center gap-2.5 mb-5">
-              <div className="p-2 rounded-lg bg-[#0E0E0E] border border-[#1A1A1A]" style={{ color: cat.color }}>
+              <div
+                className="p-2 rounded-lg bg-[#121523]/80 border border-white/[0.09]"
+                style={{ color: cat.color }}
+              >
                 {cat.icon}
               </div>
               <h4 className="text-white font-semibold">{cat.label}</h4>
@@ -48,8 +81,8 @@ export const Skills = () => (
                   transition={{ delay: ci * 0.05 + i * 0.04 }}
                   className="
                     inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg
-                    bg-[#0E0E0E] border border-[#1A1A1A] text-sm text-[#A1A1AA]
-                    hover:text-white hover:border-[#2A2A2A] hover:bg-[#141414]
+                    bg-[#121523]/80 border border-white/[0.09] text-sm text-[#b9b9ff]
+                    hover:text-white hover:border-white/[0.2] hover:bg-[#182039]
                     transition-all duration-200 cursor-default
                     font-mono-custom
                   "

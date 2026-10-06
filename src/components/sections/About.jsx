@@ -1,15 +1,31 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { MapPin, GraduationCap, Code2, Target, Clock, Cpu } from 'lucide-react';
-import { Section } from '../ui/Section';
-import { Card } from '../ui/Card';
-import { DATA } from '../../data/portfolioData';
+import React from "react";
+import { motion } from "framer-motion";
+import { MapPin, GraduationCap, Code2, Target, Clock, Cpu } from "lucide-react";
+import { Section } from "../ui/Section";
+import { Card } from "../ui/Card";
+import { DATA } from "../../data/portfolioData";
 
 const facts = [
-  { icon: <MapPin className="w-4 h-4" />, label: 'Location', value: DATA.personal.quickFacts.location },
-  { icon: <GraduationCap className="w-4 h-4" />, label: 'Degree', value: DATA.personal.quickFacts.degree },
-  { icon: <Code2 className="w-4 h-4" />, label: 'Stack', value: DATA.personal.quickFacts.primaryStack },
-  { icon: <Clock className="w-4 h-4" />, label: 'Building for', value: DATA.personal.quickFacts.yearsBuilding },
+  {
+    icon: <MapPin className="w-4 h-4" />,
+    label: "Location",
+    value: DATA.personal.quickFacts.location,
+  },
+  {
+    icon: <GraduationCap className="w-4 h-4" />,
+    label: "Degree",
+    value: DATA.personal.quickFacts.degree,
+  },
+  {
+    icon: <Code2 className="w-4 h-4" />,
+    label: "Stack",
+    value: DATA.personal.quickFacts.primaryStack,
+  },
+  {
+    icon: <Clock className="w-4 h-4" />,
+    label: "Building for",
+    value: DATA.personal.quickFacts.yearsBuilding,
+  },
 ];
 
 export const About = () => (
@@ -24,7 +40,8 @@ export const About = () => (
           viewport={{ once: true }}
           className="text-3xl md:text-5xl font-bold tracking-tight text-white leading-tight"
         >
-          Shipping systems,<br />
+          Shipping systems,
+          <br />
           <span className="text-[#3A3A3A]">not just writing code.</span>
         </motion.h2>
         <motion.p
@@ -43,7 +60,7 @@ export const About = () => (
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-[#0E0E0E] border border-[#1A1A1A] text-xs font-mono-custom text-[#555]"
+          className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-[#121523]/80 border border-white/[0.09] text-xs font-mono-custom text-[#94a3c7]"
         >
           <Cpu className="w-3.5 h-3.5 text-[#3B82F6]" />
           <span className="text-[#3B82F6]">arch</span>
@@ -65,12 +82,17 @@ export const About = () => (
             viewport={{ once: true }}
             transition={{ delay: i * 0.08 }}
           >
-            <Card hover={false} className="p-4 bg-[#0A0A0A] border-[#141414]">
+            <Card
+              hover={false}
+              className="p-4 bg-[#121523]/70 border-white/[0.09]"
+            >
               <div className="text-[#3B82F6] mb-2">{f.icon}</div>
               <div className="text-[#b9b9ff] text-[10px] uppercase tracking-widest font-mono-custom mb-1">
                 {f.label}
               </div>
-              <div className="text-white text-sm font-medium leading-snug">{f.value}</div>
+              <div className="text-white text-sm font-medium leading-snug">
+                {f.value}
+              </div>
             </Card>
           </motion.div>
         ))}
