@@ -51,7 +51,7 @@ export const Dashboard = () => (
             hover={false}
             className={`p-5 h-full border-[#141414] ${item.highlight ? 'bg-[#3B82F6]/5 border-[#3B82F6]/15' : 'bg-[#0A0A0A]'}`}
           >
-            <h3 className="text-[#555] text-xs font-mono-custom uppercase tracking-widest mb-4 flex items-center gap-2">
+            <h3 className="text-[#b9b9ff] text-xs font-mono-custom uppercase tracking-widest mb-4 flex items-center gap-2">
               {item.icon}
               {item.label}
             </h3>

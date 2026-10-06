@@ -60,15 +60,15 @@ export const Contact = () => (
       </motion.div>
 
       {/* Footer */}
-      <div className="mt-12 pt-8 border-t border-[#0E0E0E] flex flex-col md:flex-row justify-between items-center text-xs text-[#333] font-mono-custom gap-4">
+      <div className="mt-12 pt-8 border-t border-[#0E0E0E] flex flex-col md:flex-row justify-between items-center text-xs text-[#94adf4] font-mono-custom gap-4">
         <p>© {new Date().getFullYear()} Aashutosh Bairagi — engineered with React &amp; Tailwind</p>
         <div className="flex items-center gap-4">
           <a href={DATA.personal.socials.twitter} target="_blank" rel="noreferrer"
-            className="text-[#333] hover:text-white transition-colors">Twitter</a>
+            className="text-[#94adf4] hover:text-white transition-colors">Twitter</a>
           <a href={DATA.personal.socials.github} target="_blank" rel="noreferrer"
-            className="text-[#333] hover:text-white transition-colors">GitHub</a>
+            className="text-[#94adf4] hover:text-white transition-colors">GitHub</a>
           <a href={DATA.personal.socials.linkedin} target="_blank" rel="noreferrer"
-            className="text-[#333] hover:text-white transition-colors">LinkedIn</a>
+            className="text-[#94adf4] hover:text-white transition-colors">LinkedIn</a>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export const Section = ({ id, className, children }) => (
   <section
     id={id}
-    className={`py-24 px-6 md:px-12 max-w-7xl mx-auto ${className || ''}`}
+    className={`py-24 md:py-32 px-6 md:px-12 max-w-7xl mx-auto ${className || ''}`}
   >
     {children}
   </section>

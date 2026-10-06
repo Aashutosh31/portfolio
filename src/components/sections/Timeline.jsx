@@ -45,7 +45,7 @@ export const Timeline = () => (
               >
                 <div className="absolute -left-[41px] top-1.5 w-3 h-3 bg-[#0A0A0A] border-2 border-[#3B82F6]/60 rounded-full" />
                 <h3 className="text-white font-semibold mb-1">{item.title}</h3>
-                <p className="text-[#555] text-sm leading-relaxed">{item.desc}</p>
+                <p className="text-[#b9b9ff] text-sm leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>

@@ -24,11 +24,11 @@ export const Principles = () => (
             <div className="w-9 h-9 rounded-lg bg-[#3B82F6]/10 border border-[#3B82F6]/20 flex items-center justify-center text-[#3B82F6] mb-5 group-hover:bg-[#3B82F6]/15 transition-colors">
               {p.icon}
             </div>
-            <div className="text-xs font-mono-custom text-[#333] mb-2 uppercase tracking-widest">
+            <div className="text-xs font-mono-custom text-[#a2b6ffbf] mb-2 uppercase tracking-widest">
               principle_{String(i + 1).padStart(2, '0')}
             </div>
             <h3 className="text-white font-semibold mb-3 leading-snug">{p.title}</h3>
-            <p className="text-[#555] text-sm leading-relaxed">{p.desc}</p>
+            <p className="text-[#b9b9ff] text-sm leading-relaxed">{p.desc}</p>
           </Card>
         </motion.div>
       ))}

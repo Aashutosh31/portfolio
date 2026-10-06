@@ -41,9 +41,9 @@ export const Insights = () => (
               {item.title}
             </h3>
 
-            <p className="text-[#71717A] text-sm leading-relaxed flex-1">{item.desc}</p>
+            <p className="text-[#b9b9ffcb] text-sm leading-relaxed flex-1">{item.desc}</p>
 
-            <div className="flex items-center justify-between mt-6 pt-5 border-t border-[#111] text-[10px] font-mono-custom text-[#444] uppercase tracking-widest">
+            <div className="flex items-center justify-between mt-6 pt-5 border-t border-[#111] text-[10px] font-mono-custom text-[#b9b9ff] uppercase tracking-widest">
               <span>{item.date}</span>
               <span>{item.readTime}</span>
             </div>

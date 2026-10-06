@@ -57,7 +57,7 @@ export const ContactPage = ({ setRoute }) => {
         </div>
 
         {/* Footer */}
-        <div className="mt-12 pt-8 border-t border-[#0E0E0E] flex flex-col md:flex-row justify-between items-center text-xs text-[#333] font-mono-custom gap-4">
+        <div className="mt-12 pt-8 border-t border-[#0E0E0E] flex flex-col md:flex-row justify-between items-center text-xs text-[#94adf4] font-mono-custom gap-4">
           <p>© {new Date().getFullYear()} Aashutosh Bairagi — engineered with React &amp; Tailwind</p>
           <div className="flex items-center gap-2">
             <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />

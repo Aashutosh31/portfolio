@@ -1,31 +1,44 @@
+/* ── Fonts ────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ── Fonts ────────────────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
-
 /* ── Scrollbar ────────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #0A0A0A; }
-::-webkit-scrollbar-thumb { background: #1F1F1F; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #2A2A2A; }
+::-webkit-scrollbar-track { background: #080a13; }
+::-webkit-scrollbar-thumb { background: #39415c; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #69759b; }
 
 /* ── Base ─────────────────────────────────────────────────────── */
 html { scroll-behavior: smooth; }
 
 body {
-  background: #0A0A0A;
-  color: #fff;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #080a13;
+  color: #f7f7fb;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 /* ── Typography ───────────────────────────────────────────────── */
 .font-mono-custom {
-  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  font-family: 'DM Mono', 'Fira Code', 'Consolas', monospace;
 }
+
+::selection { background: rgba(156, 112, 255, .35); color: white; }
+
+.aurora-page {
+  background:
+    radial-gradient(ellipse 60% 38% at 84% 4%, rgba(80, 104, 255, .16), transparent 70%),
+    radial-gradient(ellipse 45% 28% at 10% 32%, rgba(181, 92, 255, .10), transparent 70%),
+    #080a13;
+}
+.surface { background: rgba(18, 21, 35, .72); border: 1px solid rgba(255,255,255,.09); box-shadow: 0 18px 60px rgba(0,0,0,.18); }
+.aurora-text { background: linear-gradient(110deg, #fff 20%, #a9c4ff 52%, #d0a8ff 92%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero-orbit { animation: orbit 18s linear infinite; transform-origin: center; }
+@keyframes orbit { to { transform: rotate(360deg); } }
 
 /* ── Cursor blink ─────────────────────────────────────────────── */
 @keyframes blink {
@@ -128,7 +141,7 @@ body {
 
 /* ── Gradient text ───────────────────────────────────────────── */
 .gradient-text-blue {
-  background: linear-gradient(135deg, #fff 0%, #93C5FD 50%, #3B82F6 100%);
+  background: linear-gradient(135deg, #fff 0%, #b9caff 48%, #8f72ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -142,10 +155,10 @@ body {
 
 /* ── Section divider ─────────────────────────────────────────── */
 .section-eyebrow {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'DM Mono', monospace;
   font-size: 0.75rem;
   letter-spacing: 0.15em;
-  color: #3B82F6;
+  color: #9bb5ff;
   text-transform: uppercase;
 }
 .section-eyebrow::before {

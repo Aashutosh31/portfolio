@@ -10,8 +10,8 @@ export const Card = ({ children, className = '', hover = true, onClick, glow = n
     <div
       onClick={onClick}
       className={`
-        bg-[#0E0E0E] border border-[#1A1A1A] rounded-2xl overflow-hidden
-        ${hover ? `transition-all duration-300 hover:-translate-y-0.5 hover:border-[#2A2A2A] ${glow ? glowStyles[glow] : 'hover:shadow-[0_8px_32px_rgba(0,0,0,0.4)]'}` : ''}
+        bg-[#121523]/70 border border-white/[0.09] rounded-2xl overflow-hidden backdrop-blur-sm
+        ${hover ? `transition-all duration-300 hover:-translate-y-1 hover:border-white/[0.2] ${glow ? glowStyles[glow] : 'hover:shadow-[0_20px_46px_rgba(0,0,0,0.28)]'}` : ''}
         ${onClick ? 'cursor-pointer' : ''}
         ${className}
       `}

@@ -20,16 +20,16 @@ function Navbar({ route, setRoute, onCmd }) {
     <nav className={`
       fixed top-0 w-full z-50 transition-all duration-300
       ${scrolled
-        ? 'bg-[#0A0A0A]/90 backdrop-blur-xl border-b border-[#111]'
+        ? 'bg-[#080a13]/80 backdrop-blur-xl border-b border-white/[0.08] shadow-[0_8px_30px_rgba(0,0,0,.12)]'
         : 'bg-transparent border-b border-transparent'}
     `}>
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 h-[4.5rem] flex items-center justify-between">
         {/* Logo */}
         <button
           onClick={() => { setRoute('home'); window.scrollTo(0, 0); }}
           className="font-bold text-white flex items-center gap-2.5 hover:opacity-80 transition-opacity"
         >
-          <div className="w-7 h-7 rounded-lg bg-[#3B82F6] flex items-center justify-center shadow-[0_0_12px_rgba(59,130,246,0.4)]">
+          <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-[#a581ff] to-[#528cf4] flex items-center justify-center shadow-[0_8px_20px_rgba(117,110,255,0.38)]">
             <span className="text-white text-xs font-black leading-none">A</span>
           </div>
           <span className="tracking-tight">Aashutosh</span>
@@ -47,7 +47,7 @@ function Navbar({ route, setRoute, onCmd }) {
             <a
               key={link.href}
               href={link.href}
-              className="px-3 py-1.5 text-sm text-[#555] hover:text-white transition-colors rounded-md hover:bg-[#0E0E0E]"
+              className="px-3 py-1.5 text-sm text-[#9097aa] hover:text-white transition-colors rounded-lg hover:bg-white/[0.06]"
             >
               {link.label}
             </a>
@@ -58,7 +58,7 @@ function Navbar({ route, setRoute, onCmd }) {
         <div className="flex items-center gap-2">
           <button
             onClick={onCmd}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#0E0E0E] border border-[#1A1A1A] hover:border-[#2A2A2A] transition-all text-[#555] hover:text-[#A1A1AA] text-xs font-mono-custom"
+            className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/[0.04] border border-white/[0.09] hover:border-white/[0.2] transition-all text-[#9097aa] hover:text-white text-xs font-mono-custom"
           >
             <Command className="w-3 h-3" />
             <span className="hidden sm:inline">⌘K</span>
@@ -66,7 +66,7 @@ function Navbar({ route, setRoute, onCmd }) {
 
           <button
             onClick={() => { setRoute('contact'); window.scrollTo(0, 0); }}
-            className="px-4 py-1.5 rounded-lg bg-[#3B82F6] hover:bg-[#2563EB] text-white text-sm font-medium transition-all shadow-[0_0_16px_rgba(59,130,246,0.3)] hover:shadow-[0_0_24px_rgba(59,130,246,0.4)] active:scale-95"
+            className="px-4 py-2 rounded-xl bg-gradient-to-r from-[#8069f1] to-[#4e92ed] text-white text-sm font-semibold transition-all shadow-[0_8px_20px_rgba(104,111,240,.3)] hover:-translate-y-0.5 active:scale-95"
           >
             Hire me
           </button>
@@ -232,7 +232,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A0A0A] font-sans text-white selection:bg-[#3B82F6]/20 selection:text-white">
+    <div className="min-h-screen aurora-page font-sans text-white selection:bg-[#8f72ff]/30 selection:text-white">
       <Navbar route={route} setRoute={setRoute} onCmd={() => setCmdOpen(true)} />
 
       <AnimatePresence mode="wait">

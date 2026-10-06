@@ -37,12 +37,12 @@ export const BuildingInPublic = () => (
                 <span className={`text-[10px] px-2.5 py-0.5 rounded-full border font-mono-custom tracking-widest ${typeStyles[item.type]}`}>
                   {item.type}
                 </span>
-                <span className="text-[10px] text-[#333] font-mono-custom uppercase tracking-widest">
+                <span className="text-[10px] text-[#b9b9ff] font-mono-custom uppercase tracking-widest">
                   {item.date}
                 </span>
               </div>
               <h3 className="text-white font-semibold mb-2">{item.title}</h3>
-              <p className="text-[#555] text-sm leading-relaxed">{item.desc}</p>
+              <p className="text-[#b9b9ff] text-sm leading-relaxed">{item.desc}</p>
             </Card>
           </motion.div>
         ))}

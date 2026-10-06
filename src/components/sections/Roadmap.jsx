@@ -51,7 +51,7 @@ export const Roadmap = () => (
             transition={{ delay: i * 0.08 }}
           >
             <Card hover={false} className="p-5 border-[#141414] bg-[#0A0A0A] h-full relative overflow-hidden">
-              <Compass className="absolute top-3 right-3 w-10 h-10 text-[#111] opacity-60" />
+              <Compass className="absolute top-3 right-3 w-10 h-10 text-[#ffffff9e] opacity-60" />
               <div className="relative">
                 <div className="text-xs font-mono-custom mb-4 uppercase tracking-widest" style={{ color }}>
                   {String(i + 1).padStart(2, '0')}
@@ -60,18 +60,18 @@ export const Roadmap = () => (
 
                 <div className="space-y-1.5 mb-4">
                   <div className="flex justify-between text-[10px] font-mono-custom">
-                    <span className="text-[#333] uppercase tracking-widest">now</span>
-                    <span className="text-[#555]">{item.current}</span>
+                    <span className="text-[#94adf4] uppercase tracking-widest">now</span>
+                    <span style={{ color }}>{item.current}</span>
                   </div>
                   <div className="flex justify-between text-[10px] font-mono-custom">
-                    <span className="text-[#333] uppercase tracking-widest">target</span>
+                    <span className="text-[#94adf4] uppercase tracking-widest">target</span>
                     <span style={{ color }}>{item.target}</span>
                   </div>
                 </div>
 
                 <ProgressBar progress={item.progress} color={color} />
 
-                <p className="text-[#444] text-xs leading-relaxed mt-4">{item.reason}</p>
+                <p className="text-[#b9b9ff] text-xs leading-relaxed mt-4">{item.reason}</p>
               </div>
             </Card>
           </motion.div>

@@ -7,13 +7,13 @@ export const DATA = {
     role: "Software Engineer & AI Builder",
     headline: "Building AI Systems &\nFull Stack Products.",
     subhead: "Computer Science student focused on AI-powered applications, real-time systems, scalable architectures, and production-ready software.",
-    about: "I am a second-year B.Tech Computer Science student who believes in learning through shipping. While many students focus solely on academic assignments, my passion lies in engineering real, usable products. I specialize in the MERN stack, real-time WebSocket communication, and integrating autonomous AI models into deterministic software workflows. I run Arch Linux, live in the terminal, and build systems designed for scale.",
+    about: "I am a third-year B.Tech Computer Science student who believes in learning through shipping. While many students focus solely on academic assignments, my passion lies in engineering real, usable products. I specialize in the MERN stack, real-time WebSocket communication, and integrating autonomous AI models into deterministic software workflows. I run Arch Linux, live in the terminal, and build systems designed for scale.",
     quickFacts: {
       location: "Ratlam, India",
-      degree: "B.Tech Computer Science (2nd Year)",
+      degree: "B.Tech Computer Science (3rd Year)",
       primaryStack: "React, Node.js, MongoDB",
       focus: "AI Agents & Distributed Systems",
-      yearsBuilding: "2+ Years"
+      yearsBuilding: "3+ Years"
     },
     socials: {
       github: "https://github.com/Aashutosh31",

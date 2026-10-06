@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
-import { Terminal, Github, Linkedin, Twitter, ArrowRight, Wifi, Zap, Code2, Activity } from 'lucide-react';
+import { Terminal, Github, Linkedin, Twitter, ArrowRight, Wifi, Zap, Code2, Activity, Sparkles } from 'lucide-react';
 import { Badge } from '../ui/Badge';
 import { Button } from '../ui/Button';
 import { DATA } from '../../data/portfolioData';
@@ -85,16 +85,16 @@ function TerminalBlock() {
   };
 
   return (
-    <div className="rounded-xl border border-[#1A1A1A] bg-[#080808] overflow-hidden shadow-2xl">
+    <div className="rounded-2xl border border-white/[0.12] bg-[#0e1120]/90 overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,.36)] backdrop-blur-xl">
       {/* Window chrome */}
-      <div className="flex items-center gap-2 px-4 py-3 border-b border-[#1A1A1A] bg-[#0D0D0D]">
+      <div className="flex items-center gap-2 px-4 py-3 border-b border-white/[0.08] bg-white/[0.03]">
         <div className="w-3 h-3 rounded-full bg-[#FF5F57]" />
         <div className="w-3 h-3 rounded-full bg-[#FEBC2E]" />
         <div className="w-3 h-3 rounded-full bg-[#28C840]" />
-        <span className="ml-3 text-xs text-[#444] font-mono-custom">~/terminal — bash</span>
+        <span className="ml-3 text-xs text-[#b9b9ff] font-mono-custom">~/terminal — bash</span>
         <div className="ml-auto flex items-center gap-1.5">
           <div className="w-1.5 h-1.5 rounded-full bg-[#28C840] animate-pulse" />
-          <span className="text-[10px] text-[#444] font-mono-custom">connected</span>
+          <span className="text-[10px] text-[#28C840] font-mono-custom">connected</span>
         </div>
       </div>
       {/* Content */}
@@ -111,7 +111,7 @@ function TerminalBlock() {
               <span className="text-[#3B82F6] select-none">❯</span>
               <span className="text-[#E2E8F0]">{line.prompt}</span>
             </div>
-            <div className="text-[#71717A] pl-4">{line.output}</div>
+            <div className="text-[#b9b9ff] pl-4">{line.output}</div>
           </motion.div>
         ))}
         {/* Currently typing */}
@@ -160,8 +160,8 @@ function StatChip({ label, value, suffix }) {
     : value;
 
   return (
-    <div ref={ref} className="flex flex-col gap-0.5 p-3 rounded-lg bg-[#0E0E0E] border border-[#1A1A1A]">
-      <div className="text-xs text-[#555] font-mono-custom uppercase tracking-widest">{label}</div>
+    <div ref={ref} className="flex flex-col gap-0.5 p-3.5 rounded-xl bg-white/[0.045] border border-white/[0.09] backdrop-blur-sm">
+      <div className="text-xs text-[#b9b9ff] font-mono-custom uppercase tracking-widest">{label}</div>
       <div className="text-xl font-bold text-white tabular-nums">
         {isNumeric ? displayValue : value}{suffix}
       </div>
@@ -173,8 +173,9 @@ export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-28 pb-16 grid-bg noise">
       {/* Ambient glow */}
-      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-[#3B82F6] opacity-[0.04] blur-[140px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#8B5CF6] opacity-[0.03] blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-[8%] left-[8%] w-[520px] h-[520px] bg-[#587cf9] opacity-[0.10] blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-[4%] right-[8%] w-[440px] h-[440px] bg-[#b06ff6] opacity-[0.10] blur-[140px] rounded-full pointer-events-none" />
+      <div className="hero-orbit absolute -right-24 top-24 w-80 h-80 rounded-full border border-[#9eafff]/15 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto w-full grid xl:grid-cols-2 gap-16 items-center relative z-10">
 
@@ -186,10 +187,10 @@ export const Hero = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center gap-3 mb-8">
-              <Badge variant="blue" icon={<Terminal className="w-3 h-3" />}>
-                Software Engineer & Architect
+              <Badge variant="blue" icon={<Sparkles className="w-3 h-3" />}>
+                3rd year · CS student
               </Badge>
-              <div className="flex items-center gap-1.5 text-xs text-[#555] font-mono-custom">
+              <div className="flex items-center gap-1.5 text-xs text-[#b9b9ff] font-mono-custom">
                 <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                 Available for work
               </div>
@@ -201,14 +202,14 @@ export const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05] mb-6">
-              <span className="text-white">Building</span>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-[-0.06em] leading-[1.02] mb-7">
+              <span className="text-white">Building the</span>
               <br />
-              <span className="gradient-text-blue">AI Systems</span>
+              <span className="aurora-text">intelligent layer</span>
               <br />
-              <span className="text-white">&amp; Full Stack</span>
+              <span className="text-white">of the web.</span>
               <br />
-              <span className="text-[#3A3A3A]">Products.</span>
+              <span className="text-[#5a6075]">One system at a time.</span>
             </h1>
           </motion.div>
 
@@ -216,7 +217,7 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-[#71717A] text-lg leading-relaxed mb-10 max-w-lg"
+            className="text-[#aeb4c4] text-lg leading-relaxed mb-10 max-w-lg"
           >
             {DATA.personal.subhead}
           </motion.p>
@@ -243,19 +244,19 @@ export const Hero = () => {
             className="flex items-center gap-5"
           >
             <a href={DATA.personal.socials.github} target="_blank" rel="noreferrer"
-              className="text-[#444] hover:text-white transition-colors duration-200 p-2 -m-2">
+              className="text-[#b9b9ff] hover:text-white transition-colors duration-200 p-2 -m-2">
               <Github className="w-5 h-5" />
             </a>
             <a href={DATA.personal.socials.linkedin} target="_blank" rel="noreferrer"
-              className="text-[#444] hover:text-white transition-colors duration-200 p-2 -m-2">
+              className="text-[#b9b9ff] hover:text-white transition-colors duration-200 p-2 -m-2">
               <Linkedin className="w-5 h-5" />
             </a>
             <a href={DATA.personal.socials.twitter} target="_blank" rel="noreferrer"
-              className="text-[#444] hover:text-white transition-colors duration-200 p-2 -m-2">
+              className="text-[#b9b9ff] hover:text-white transition-colors duration-200 p-2 -m-2">
               <Twitter className="w-5 h-5" />
             </a>
             <div className="w-px h-4 bg-[#1F1F1F]" />
-            <span className="text-[#444] text-xs font-mono-custom">{DATA.personal.quickFacts.location}</span>
+            <span className="text-[#b9b9ff] text-xs font-mono-custom">{DATA.personal.quickFacts.location}</span>
           </motion.div>
         </div>
 
@@ -264,7 +265,7 @@ export const Hero = () => {
           initial={{ opacity: 0, scale: 0.97 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="flex flex-col gap-4"
+          className="flex flex-col gap-4 relative"
         >
           <TerminalBlock />
 
@@ -276,10 +277,10 @@ export const Hero = () => {
           </div>
 
           {/* Currently building pills */}
-          <div className="flex flex-wrap gap-2 p-3 rounded-xl bg-[#0E0E0E] border border-[#1A1A1A]">
-            <span className="text-xs text-[#555] font-mono-custom self-center mr-1">building →</span>
+          <div className="flex flex-wrap gap-2 p-3 rounded-xl bg-white/[0.045] border border-white/[0.09] backdrop-blur-sm">
+            <span className="text-xs text-[#b9b9ff] font-mono-custom self-center mr-1">building →</span>
             {DATA.currently.building.map(item => (
-              <span key={item} className="inline-flex items-center gap-1 text-xs text-[#A1A1AA] bg-[#141414] border border-[#222] px-2.5 py-1 rounded-full">
+              <span key={item} className="inline-flex items-center gap-1 text-xs text-[#b9b9ff] bg-[#12122995] border border-[#222] px-2.5 py-1 rounded-full">
                 <Zap className="w-2.5 h-2.5 text-[#3B82F6]" />
                 {item}
               </span>
@@ -295,11 +296,11 @@ export const Hero = () => {
         transition={{ delay: 1.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-[10px] text-[#333] font-mono-custom uppercase tracking-[0.2em]">scroll</span>
+        <span className="text-[10px] text-[#b9b9ff] font-mono-custom uppercase tracking-[0.2em]">scroll</span>
         <motion.div
           animate={{ y: [0, 6, 0] }}
           transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
-          className="w-px h-8 bg-gradient-to-b from-[#333] to-transparent"
+          className="w-px h-8 bg-gradient-to-b from-[#b9b9ff] to-transparent"
         />
       </motion.div>
     </section>

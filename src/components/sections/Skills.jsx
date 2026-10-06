@@ -34,7 +34,7 @@ export const Skills = () => (
                 {cat.icon}
               </div>
               <h4 className="text-white font-semibold">{cat.label}</h4>
-              <span className="ml-auto text-xs font-mono-custom text-[#333]">
+              <span className="ml-auto text-xs font-mono-custom text-[#b9b9ff]">
                 {DATA.skills[cat.key].length} techs
               </span>
             </div>

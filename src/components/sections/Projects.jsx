@@ -43,13 +43,13 @@ function ProjectCard({ project, index, setRoute }) {
           />
 
           {/* Status chip */}
-          <div className="absolute top-4 left-4 z-20 flex items-center gap-1.5 bg-[#080808]/90 backdrop-blur-sm border border-[#1A1A1A] text-white text-xs px-3 py-1.5 rounded-full font-mono-custom">
+          <div className="absolute top-4 left-4 z-20 flex items-center gap-1.5 bg-[#080808]/90 backdrop-blur-sm border border-[#1A1A1A] text-[#28C840] text-xs px-3 py-1.5 rounded-full font-mono-custom">
             <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
             {project.metrics.status}
           </div>
 
           {/* Architecture label */}
-          <div className="absolute top-4 right-4 z-20 text-xs font-mono-custom text-[#555] bg-[#080808]/90 backdrop-blur-sm border border-[#1A1A1A] px-2.5 py-1 rounded-full">
+          <div className="absolute top-4 right-4 z-20 text-xs font-mono-custom text-[#b9b9ff] bg-[#080808]/90 backdrop-blur-sm border border-[#1A1A1A] px-2.5 py-1 rounded-full">
             {project.metrics.architecture}
           </div>
 
@@ -67,7 +67,7 @@ function ProjectCard({ project, index, setRoute }) {
               { label: 'Endpoints', value: project.metrics.endpoints },
             ].map(m => (
               <div key={m.label} className="flex flex-col">
-                <span className="text-[10px] text-[#333] font-mono-custom uppercase tracking-widest">{m.label}</span>
+                <span className="text-[10px] text-[#b9b9ff] font-mono-custom uppercase tracking-widest">{m.label}</span>
                 <span className={`text-sm font-bold font-mono-custom ${accentClass}`}>{m.value}</span>
               </div>
             ))}
@@ -76,7 +76,7 @@ function ProjectCard({ project, index, setRoute }) {
           <h3 className={`text-3xl font-bold text-white mb-3 group-hover:${accentClass} transition-colors duration-300`}>
             {project.title}
           </h3>
-          <p className="text-[#71717A] text-sm leading-relaxed mb-6 flex-1">{project.shortDesc}</p>
+          <p className="text-[#b9b9ff] text-sm leading-relaxed mb-6 flex-1">{project.shortDesc}</p>
 
           {/* Tags */}
           <div className="flex flex-wrap gap-1.5 mb-6">
@@ -102,7 +102,7 @@ function ProjectCard({ project, index, setRoute }) {
                 target="_blank"
                 rel="noreferrer"
                 onClick={e => e.stopPropagation()}
-                className="text-[#444] hover:text-white transition-colors p-1.5 rounded hover:bg-[#141414]"
+                className="text-[#b9b9ff] hover:text-white transition-colors p-1.5 rounded hover:bg-[#141414]"
                 aria-label="Live demo"
               >
                 <ExternalLink className="w-4 h-4" />
@@ -112,7 +112,7 @@ function ProjectCard({ project, index, setRoute }) {
                 target="_blank"
                 rel="noreferrer"
                 onClick={e => e.stopPropagation()}
-                className="text-[#444] hover:text-white transition-colors p-1.5 rounded hover:bg-[#141414]"
+                className="text-[#b9b9ff] hover:text-white transition-colors p-1.5 rounded hover:bg-[#141414]"
                 aria-label="GitHub"
               >
                 <Github className="w-4 h-4" />

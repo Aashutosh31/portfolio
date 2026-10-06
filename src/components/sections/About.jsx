@@ -32,7 +32,7 @@ export const About = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-[#71717A] text-lg leading-relaxed"
+          className="text-[#b9b9ff] text-lg leading-relaxed"
         >
           {DATA.personal.about}
         </motion.p>
@@ -47,11 +47,11 @@ export const About = () => (
         >
           <Cpu className="w-3.5 h-3.5 text-[#3B82F6]" />
           <span className="text-[#3B82F6]">arch</span>
-          <span>linux</span>
+          <span className="text-[#b9b9ff]">linux</span>
           <span className="text-[#333]">|</span>
-          <span>neovim</span>
+          <span className="text-[#b9b9ff]">neovim</span>
           <span className="text-[#333]">|</span>
-          <span>tmux</span>
+          <span className="text-[#b9b9ff]">tmux</span>
         </motion.div>
       </div>
 
@@ -67,7 +67,7 @@ export const About = () => (
           >
             <Card hover={false} className="p-4 bg-[#0A0A0A] border-[#141414]">
               <div className="text-[#3B82F6] mb-2">{f.icon}</div>
-              <div className="text-[#444] text-[10px] uppercase tracking-widest font-mono-custom mb-1">
+              <div className="text-[#b9b9ff] text-[10px] uppercase tracking-widest font-mono-custom mb-1">
                 {f.label}
               </div>
               <div className="text-white text-sm font-medium leading-snug">{f.value}</div>
