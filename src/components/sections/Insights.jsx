@@ -29,7 +29,13 @@ export const Insights = () => (
           transition={{ delay: i * 0.1 }}
           className="h-full"
         >
-          <Card
+          <a
+            href={item.href || "https://dev.to/aashutosh_bairagi_31"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block h-full"
+          >
+            <Card
             className="p-7 h-full flex flex-col group border-white/[0.09] bg-[#121523]/70 scanline-hover"
             hover
             glow="blue"
@@ -57,8 +63,29 @@ export const Insights = () => (
               <span>{item.readTime}</span>
             </div>
           </Card>
+          </a>
         </motion.div>
       ))}
+    </div>
+
+    <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+      <span className="text-[#71717A]">Read the full write-ups:</span>
+      <a
+        href="https://dev.to/aashutosh_bairagi_31"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-[#3B82F6] hover:text-white transition-colors inline-flex items-center gap-1"
+      >
+        dev.to <ArrowUpRight className="w-3.5 h-3.5" />
+      </a>
+      <a
+        href="https://medium.com/@aashutosh.bairagi05"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-[#3B82F6] hover:text-white transition-colors inline-flex items-center gap-1"
+      >
+        Medium <ArrowUpRight className="w-3.5 h-3.5" />
+      </a>
     </div>
   </Section>
 );

@@ -19,6 +19,8 @@ export const DATA = {
       github: "https://github.com/Aashutosh31",
       linkedin: "https://www.linkedin.com/in/aashutosh-bairagi-559aa530b",
       twitter: "https://x.com/Aashutosh_dev31",
+      devto: "https://dev.to/aashutosh_bairagi_31",
+      medium: "https://medium.com/@aashutosh.bairagi05",
       email: "aashutosh.bairagi05@gmail.com"
     }
   },
@@ -41,10 +43,10 @@ export const DATA = {
     { title: "Keep systems maintainable", icon: <Wrench className="w-5 h-5"/>, desc: "Write code for the next engineer. Clear boundaries, modularity, and comprehensive documentation." }
   ],
   insights: [
-    { title: "Shipping a Tool With No Backend", date: "Engineering Log", readTime: "Privacy", desc: "Bulk Delete for ChatGPT runs entirely in the browser — no account, no telemetry, no server. Every feature had to earn its place inside that constraint.", tag: "PRIVACY" },
-    { title: "What Redis Taught Me About Scaling", date: "Engineering Log", readTime: "Architecture", desc: "Moving from local state to a distributed Redis pub/sub model was the key to making WebChat horizontally scalable. It fundamentally changed how I view stateless architecture.", tag: "ARCH" },
-    { title: "The Nightmare of State Synchronization", date: "Engineering Log", readTime: "Frontend", desc: "Phantom messages and UI desyncs are the hardest part of real-time apps. I solved this by strictly chaining MongoDB writes before acknowledging Socket.IO emits.", tag: "FRONTEND" },
-    { title: "Taming the AI Context Window", date: "Engineering Log", readTime: "AI Systems", desc: "Naive LLM wrappers fail at scale. Building ARC-AI required a dedicated retrieval pipeline with Pinecone to separate working context from long-term memory.", tag: "AI" }
+    { title: "Shipping a Tool With No Backend", date: "Engineering Log", readTime: "Privacy", desc: "Bulk Delete for ChatGPT runs entirely in the browser — no account, no telemetry, no server. Every feature had to earn its place inside that constraint.", tag: "PRIVACY", href: "https://github.com/Aashutosh31/bulk-delete-for-chatgpt" },
+    { title: "What Redis Taught Me About Scaling", date: "Engineering Log", readTime: "Architecture", desc: "Moving from local state to a distributed Redis pub/sub model was the key to making WebChat horizontally scalable. It fundamentally changed how I view stateless architecture.", tag: "ARCH", href: "https://dev.to/aashutosh_bairagi_31" },
+    { title: "The Nightmare of State Synchronization", date: "Engineering Log", readTime: "Frontend", desc: "Phantom messages and UI desyncs are the hardest part of real-time apps. I solved this by strictly chaining MongoDB writes before acknowledging Socket.IO emits.", tag: "FRONTEND", href: "https://dev.to/aashutosh_bairagi_31" },
+    { title: "Taming the AI Context Window", date: "Engineering Log", readTime: "AI Systems", desc: "Naive LLM wrappers fail at scale. Building ARC-AI required a dedicated retrieval pipeline with Pinecone to separate working context from long-term memory.", tag: "AI", href: "https://dev.to/aashutosh_bairagi_31" }
   ],
   roadmap: [
     { topic: "System Design", target: "Advanced", current: "Intermediate", progress: 55, reason: "To architect systems capable of handling millions of concurrent users." },
