@@ -4,6 +4,7 @@ import { Hero } from '../components/sections/Hero';
 import { About } from '../components/sections/About';
 import { Dashboard } from '../components/sections/Dashboard';
 import { Projects } from '../components/sections/Projects';
+import { MoreBuilds, Recognition } from '../components/sections/MoreBuilds';
 import { Skills } from '../components/sections/Skills';
 import { Principles } from '../components/sections/Principles';
 import { Insights } from '../components/sections/Insights';
@@ -24,11 +25,13 @@ export const Home = ({ setRoute }) => (
     <About />
     <Dashboard />
     <Projects setRoute={setRoute} />
+    <MoreBuilds />
     <Skills />
     <Insights />
     <Principles />
     <BuildingInPublic />
     <Timeline />
+    <Recognition />
     <Roadmap />
     <Contact />
   </motion.main>

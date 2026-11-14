@@ -62,6 +62,7 @@ function Navbar({ route, setRoute, onCmd }) {
               { href: "#projects", label: "Work" },
               { href: "#skills", label: "Stack" },
               { href: "#journey", label: "Journey" },
+              { href: "#recognition", label: "Recognition" },
               { href: "#contact", label: "Contact" },
             ].map((link) => (
               <a
@@ -172,6 +173,34 @@ function CommandPalette({ open, onClose, setRoute }) {
               () =>
                 document
                   .getElementById("journey")
+                  ?.scrollIntoView({ behavior: "smooth" }),
+              100,
+            );
+          },
+        },
+        {
+          label: "More Builds",
+          icon: <Layers className="w-4 h-4" />,
+          action: () => {
+            setRoute("home");
+            setTimeout(
+              () =>
+                document
+                  .getElementById("more-builds")
+                  ?.scrollIntoView({ behavior: "smooth" }),
+              100,
+            );
+          },
+        },
+        {
+          label: "Recognition",
+          icon: <Activity className="w-4 h-4" />,
+          action: () => {
+            setRoute("home");
+            setTimeout(
+              () =>
+                document
+                  .getElementById("recognition")
                   ?.scrollIntoView({ behavior: "smooth" }),
               100,
             );

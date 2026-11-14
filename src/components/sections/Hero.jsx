@@ -8,8 +8,8 @@ import { DATA } from '../../data/portfolioData';
 const LINES = [
   { prompt: 'whoami', output: 'Aashutosh Bairagi — Software Engineer & AI Builder' },
   { prompt: 'pwd', output: '/home/aashutosh/projects' },
-  { prompt: 'ls -la', output: 'webchat/  arc-ai/  learning/  this-portfolio/' },
-  { prompt: 'cat mission.txt', output: 'Shipping production-grade AI systems & distributed architectures.' },
+  { prompt: 'ls -la', output: 'webchat/  arc-ai/  receipts/  attendtrack/  bulk-delete/' },
+  { prompt: 'cat mission.txt', output: 'Shipping real-time products, AI systems & privacy-first tools.' },
 ];
 
 function TerminalBlock() {

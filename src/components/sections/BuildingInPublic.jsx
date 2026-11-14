@@ -9,6 +9,7 @@ const typeStyles = {
   Architecture: "bg-[#3B82F6]/10 text-[#3B82F6] border-[#3B82F6]/20",
   Feature: "bg-[#8B5CF6]/10 text-[#8B5CF6] border-[#8B5CF6]/20",
   Experiment: "bg-amber-500/10 text-amber-400 border-amber-500/20",
+  Recognition: "bg-[#3B82F6]/10 text-[#93c5fd] border-[#3B82F6]/20",
 };
 
 export const BuildingInPublic = () => (

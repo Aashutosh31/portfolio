@@ -9,6 +9,7 @@ const tagColors = {
   ARCH: "bg-[#3B82F6]/10 text-[#3B82F6] border-[#3B82F6]/20",
   FRONTEND: "bg-[#8B5CF6]/10 text-[#8B5CF6] border-[#8B5CF6]/20",
   AI: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+  PRIVACY: "bg-[#F59E0B]/10 text-[#F59E0B] border-[#F59E0B]/20",
 };
 
 export const Insights = () => (
@@ -18,7 +19,7 @@ export const Insights = () => (
       title="Lessons learned"
       subtitle="Deep-dives into architecture decisions, scaling problems, and hard-won insights."
     />
-    <div className="grid lg:grid-cols-3 gap-5">
+    <div className="grid md:grid-cols-2 gap-5">
       {DATA.insights.map((item, i) => (
         <motion.div
           key={i}
