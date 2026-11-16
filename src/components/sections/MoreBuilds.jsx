@@ -230,6 +230,17 @@ function LatestBuild() {
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
+            {build.links.amo && (
+              <a
+                href={build.links.amo}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#10B981]/10 border border-[#10B981]/25 text-[#10B981] text-sm font-semibold hover:bg-[#10B981]/15 hover:border-[#10B981]/40 transition-all duration-200"
+              >
+                <ExternalLink className="w-4 h-4" />
+                Install on Firefox
+              </a>
+            )}
             <a
               href={build.links.github}
               target="_blank"

@@ -151,8 +151,11 @@ export const DATA = {
     title: "Bulk Delete for ChatGPT",
     shortDesc: "Select and permanently delete your own ChatGPT conversations in bulk — open source, no telemetry, no servers.",
     tags: ["JavaScript", "WebExtension", "Firefox", "Chrome"],
-    meta: "MIT License · v1.0.0 · manual install",
-    links: { github: "https://github.com/Aashutosh31/bulk-delete-for-chatgpt" }
+    meta: "MIT License · v1.0.0 · Firefox Add-ons",
+    links: {
+      amo: "https://addons.mozilla.org/addon/bulk-delete-for-chatgpt/",
+      github: "https://github.com/Aashutosh31/bulk-delete-for-chatgpt"
+    }
   },
   otherProjects: [
     {
